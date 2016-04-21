@@ -1,0 +1,8 @@
+﻿Group: Widgets
+FriendlyName: Home Page New Products
+SystemName: Widgets.HomePageNewProducts
+Version: 1.00
+SupportedVersions: 3.70
+Author: Stoyan Dobrev
+DisplayOrder: 1
+FileName: Nop.Plugin.Widgets.HomePageNewProducts.dll
