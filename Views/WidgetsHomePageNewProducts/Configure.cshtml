@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "";
+}
+@model Nop.Plugin.Widgets.HomePageNewProducts.Models.ConfigurationModel
+@using Nop.Web.Framework;
+@Html.Action("StoreScopeConfiguration", "Setting", new { area = "Admin" })
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <table class="adminContent">
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.WidgetZone):
+            </td>
+            <td class="adminData">
+                @Html.EnumDropDownListFor(model => model.WidgetZone)
+                @Html.ValidationMessageFor(model => model.WidgetZone)
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.ProductsCount):
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.ProductsCount)
+                @Html.ValidationMessageFor(model => model.ProductsCount)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="save" class="k-button" value="@T("Admin.Common.Save")" />
+            </td>
+        </tr>
+    </table>
+}

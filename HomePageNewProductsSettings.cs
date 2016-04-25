@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Nop.Core.Configuration;
 
 namespace Nop.Plugin.Widgets.HomePageNewProducts
 {
-    public class HomePageNewProductsSettings
+    public class HomePageNewProductsSettings : ISettings
     {
+        public WidgetZone WidgetZone { get; set; }
+
+        public byte ProductsCount { get; set; }
     }
 }

@@ -1,0 +1,19 @@
+﻿@model Nop.Plugin.Widgets.HomePageNewProducts.Models.PublicViewModel
+
+@{
+    Layout = "";
+}
+
+@using Nop.Web.Framework.UI
+
+<div class="product-grid">
+    <div class="item-grid">
+        @foreach (var item in Model.Products)
+        {
+            <div class="item-box">
+                @Html.Partial("_ProductBox", item)
+            </div>
+        }
+    </div>
+
+</div>
